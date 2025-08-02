@@ -113,6 +113,9 @@ function showDashboard(userEmail) {
     document.getElementById('authPage').style.display = 'none';
     document.getElementById('dashboardPage').style.display = 'block';
     
+    // Save the logged-in user's email
+    localStorage.setItem('loggedInUserEmail', userEmail);
+    
     // Load data based on user email
     loadDashboardData(userEmail);
 }
@@ -152,6 +155,17 @@ document.getElementById('authSwitch').addEventListener('click', function() {
 });
 
 // Logout function
+// Check if we should go directly to the dashboard on page load
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('returnToDashboard') === 'true') {
+        localStorage.removeItem('returnToDashboard');
+        // Assuming a default user or a way to get the logged-in user's email
+        // For now, we'll use a placeholder or you can adjust this based on your auth flow
+        const userEmail = localStorage.getItem('loggedInUserEmail') || 'default@example.com'; // You need to store the logged-in user's email
+        showDashboard(userEmail);
+    }
+});
+
 function logout() {
     console.log('User logged out');
     document.getElementById('dashboardPage').style.display = 'none';

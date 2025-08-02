@@ -32,6 +32,22 @@
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -51,6 +67,7 @@
         </tbody>
     </table>
 
+    <button class="back-button" onclick="localStorage.setItem('returnToDashboard', 'true'); location.href='index.html';">Back to Home</button>
     <script src="assets/js/leaderboard.js"></script>
 </body>
 </html>
