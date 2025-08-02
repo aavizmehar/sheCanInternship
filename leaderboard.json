@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Alice Wonderland",
+    "referralCode": "ALICE001",
+    "totalDonations": 15000
+  },
+  {
+    "name": "Bob The Builder",
+    "referralCode": "BOBBYB02",
+    "totalDonations": 25000
+  },
+  {
+    "name": "Charlie Chaplin",
+    "referralCode": "CHAS003",
+    "totalDonations": 10000
+  }
+]

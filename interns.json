@@ -1,0 +1,38 @@
+
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "college": "University of Example",
+    "department": "Software Engineering"
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "email": "jane.smith@example.com",
+    "college": "Example State University",
+    "department": "Data Science"
+  },
+  {
+    "id": 3,
+    "name": "Peter Jones",
+    "email": "peter.jones@example.com",
+    "college": "Institute of Examples",
+    "department": "Cybersecurity"
+  },
+  {
+    "id": 4,
+    "name": "Mary Johnson",
+    "email": "mary.johnson@example.com",
+    "college": "Example College",
+    "department": "Cloud Computing"
+  },
+  {
+    "id": 5,
+    "name": "David Williams",
+    "email": "david.williams@example.com",
+    "college": "University of Example",
+    "department": "AI/ML"
+  }
+]

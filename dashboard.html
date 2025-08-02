@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intern Dashboard</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Login/Signup Page -->
+    <div id="authPage" class="auth-container">
+        <div class="auth-card">
+           <h1>She Can Foundation</h1>
+            <h2 id="authTitle">Login</h2>
+            <form id="authForm">
+                <div class="form-group" id="nameGroup" style="display: none;">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn" id="authBtn">Login</button>
+            </form>
+            <p>
+                <span id="authSwitchText">Don't have an account?</span>
+                <span class="auth-switch" id="authSwitch">Sign up</span>
+            </p>
+        </div>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div id="dashboardPage" class="dashboard">
+        <div class="container">
+            <div class="header">
+                <button class="logout-btn" onclick="logout()">Logout</button>
+                <button class="leaderboard-btn" onclick="location.href='leaderboard.html'">Leaderboard</button>
+                <h1 id="welcomeMessage">Welcome back, <span id="dashboardUserName"></span>!</h1>
+                <p>Track your progress and unlock amazing rewards</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">👤</div>
+                    <div class="stat-value" id="internName"></div>
+                    <div class="stat-label">Intern Name</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🔗</div>
+                    <div class="referral-code" id="referralCode"></div>
+                    <div class="stat-label">Your Referral Code</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-value">$<span id="amountRaised">0</span></div>
+                    <div class="stat-label">Total Donations Raised</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="donationProgress" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rewards-section">
+                <h3>🏆 Rewards & Unlockables</h3>
+                <div class="rewards-grid">
+                    <div class="reward-item unlocked">
+                        <div class="reward-icon">🎖️</div>
+                        <div class="reward-title">Welcome Badge</div>
+                        <div class="reward-requirement">Join the program</div>
+                    </div>
+
+                    <div class="reward-item" id="reward1000">
+                        <div class="reward-icon">⭐</div>
+                        <div class="reward-title">Rising Star</div>
+                        <div class="reward-requirement">Raise $1,000</div>
+                    </div>
+
+                    <div class="reward-item" id="reward5000">
+                        <div class="reward-icon">🌟</div>
+                        <div class="reward-title">Super Star</div>
+                        <div class="reward-requirement">Raise $5,000</div>
+                    </div>
+
+                    <div class="reward-item" id="reward10000">
+                        <div class="reward-icon">💎</div>
+                        <div class="reward-title">Diamond Fundraiser</div>
+                        <div class="reward-requirement">Raise $10,000</div>
+                    </div>
+
+                    <div class="reward-item" id="reward25000">
+                        <div class="reward-icon">👑</div>
+                        <div class="reward-title">Fundraising Royalty</div>
+                        <div class="reward-requirement">Raise $25,000</div>
+                    </div>
+
+                    <div class="reward-item" id="reward50000">
+                        <div class="reward-icon">🚀</div>
+                        <div class="reward-title">Legendary Status</div>
+                        <div class="reward-requirement">Raise $50,000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="assets/js/dashboard.js"></script>
+</body>
+</html>
